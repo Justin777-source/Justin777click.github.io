@@ -1,6 +1,6 @@
-In this project, I am looking at the most common species of trees in urban areas and determining if there are more native tree species within each city.
-The cities I am collecting data from are Seattle, St. Louis, and Washington D.C. I chose these regions as they represent each geographical region of the U.S.
-My objective in this project is to determine if urbanization increases or decreases tree species [diversity.]Or do certain tree species do better in urban environments than others? 
+In this project, I am looking at the most common species of trees in urban areas and determining if there are more native tree or introduced species within each city.
+The cities I am collecting data from are Seattle and New Orleans. I chose these regions as they represent each geographical region of the U.S.
+My objective in this project is to determine if urbanization increases or decreases tree native species diversity. Or do certain tree species do better in urban environments than others? 
  
 
 **Data:** 
@@ -25,6 +25,7 @@ area_new_orleans_km2 <- 906
 tree_data$native <- tolower(trims(tree_data$native))
 
 **Group BY**
+
 tree_density <- tree_data %>%
   group_by(native) %>%
   summarise(count = n()) %>%
@@ -97,10 +98,14 @@ Seattle Density
 <html>
 <body>
 <!--StartFragment-->
-1 | introduced | 121176 | 850.35789
+1 | introduced | 
+ 121176 |
+ 850.35789
 -- | -- | -- | --
-2 | naturally_occurring | 9887 | 69.38246
-3 | no_info | 34560 | 242.52632
+2 | naturally_occurring |
+ 9887 | 69.38246
+3 | no_info |
+ 34560 | 242.52632
 
 <!--EndFragment-->
 </body>
