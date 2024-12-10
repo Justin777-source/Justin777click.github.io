@@ -5,7 +5,7 @@ Analyzing The Density of Non-Native vs Native Urban Tree Species
 
 
 
-
+                Introduction
 
 
 In this project, I am looking at the most common species of trees in urban areas and determining if there are more native tree or introduced species within each city.
@@ -13,12 +13,12 @@ The cities I am collecting data from are Seattle and New Orleans. I chose these 
 My objective in this project is to determine if urbanization increases or decreases tree native species diversity. Or do certain tree species do better in urban environments than others? 
  
 
-**Data:** 
+                **Data:** 
 
 The dataset I used came from the Dryad dataset of 5 million trees, describing their nativity, health, and location within 63 U.S cities. 
 
 
-**Methods **
+             **Methods **
 
 The code I employed for this operation  was:
 
@@ -34,7 +34,7 @@ area_new_orleans_km2 <- 906
 
 tree_data$native <- tolower(trims(tree_data$native))
 
-**Group BY**
+       **Group BY**
 
 tree_density <- tree_data %>%
   group_by(native) %>%
@@ -43,7 +43,7 @@ tree_density <- tree_data %>%
 
 print(tree_density)
 
-**GGPLOT**
+     **GGPLOT**
 
 ggplot2(tree_density, aes(x = native, y = density, fill = native)) +
   geom_bar(stat = "identity", show.legend = FALSE) +
@@ -57,7 +57,7 @@ ggplot2(tree_density, aes(x = native, y = density, fill = native)) +
                                "naturally_occurring" = "green", 
                                "no_info" = "gray"))
 
-Seattle
+         Seattle
 
 tree_data2<-read.csv("C:/Users/Justi/Downloads/doi_10_5061_dryad_2jm63xsrf__v20220830/Seattle_Final_2022-06-18.csv")
 
@@ -90,7 +90,7 @@ ggplot2(tree_density2, aes(x = native, y = density, fill = native)) +
 
 
 
-results:
+          results:
 
 New Orleans Density
 
