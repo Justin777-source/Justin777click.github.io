@@ -20,6 +20,8 @@ The dataset I used came from the Dryad dataset of 5 million trees, describing th
 
              **Methods **
 
+(dplyr) (ggplot2) (class)
+
 The code I employed for this operation  was:
 
 New Orleans 
